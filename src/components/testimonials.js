@@ -27,7 +27,7 @@ export const Testimonials = () => {
         <div className="row">
           {info.data
             ? info.data.map((d, i) => (
-                <div className="col-md-4">
+                <div key={`${d.name}-${i}`} className="col-md-4">
                   <div className="testimonial">
                     <div className="testimonial-content">
                       <p>"{d.description}"</p>

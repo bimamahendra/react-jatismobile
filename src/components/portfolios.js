@@ -34,7 +34,10 @@ export const Portfolios = () => {
         <div className="row">
           {info.data
             ? info.data.map((d, i) => (
-                <div className="portfolios-img col-sm-6 col-md-4 col-lg-4">
+                <div
+                  key={`${d.title}-${i}`}
+                  className="portfolios-img col-sm-6 col-md-4 col-lg-4"
+                >
                   <div className="portfolios-item">
                     <div className="hover-bg">
                       <div className="hover-text">

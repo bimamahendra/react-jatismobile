@@ -28,12 +28,12 @@ export const Product = () => {
         <div className="row">
           {info.data
             ? info.data.map((d, i) => (
-                <div className="col-md-4">
+                <div key={`${d.title}-${i}`} className="col-md-4">
                   {" "}
                   <img src={d.image} className={d.image}></img>
                   <div className="service-desc">
-                    <h3>{d.title}</h3>
-                    <p>{d.description}</p>
+                    <h3 key={`${d.title}-${i}`}>{d.title}</h3>
+                    <p key={`${d.description}-${i}`}>{d.description}</p>
                   </div>
                 </div>
               ))

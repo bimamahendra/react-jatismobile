@@ -27,7 +27,7 @@ export const Clients = () => {
         <div className="row justify-content-center">
           {info.data
             ? info.data.map((d, i) => (
-                <div className="col-md-2">
+                <div key={`${d.image}-${i}`} className="col-md-2">
                   <div className="thumbnail">
                     {" "}
                     <img src={d.image} alt="..." className="clients-img" />
