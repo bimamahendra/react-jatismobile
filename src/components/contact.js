@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -24,7 +24,6 @@ export const Contact = () => {
   }, []);
 
   const [{ name, email, message }, setState] = useState(initialState);
-  const [data, setData] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,7 +43,6 @@ export const Contact = () => {
     axios
       .post("https://jatis.binarynusantara.com/api/v1/contacts", data)
       .then((res) => {
-        setData(res.data);
         console.log(res.data.message);
         clearState();
       })

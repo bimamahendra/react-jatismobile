@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -30,7 +30,7 @@ export const Product = () => {
             ? info.data.map((d, i) => (
                 <div key={`${d.title}-${i}`} className="col-md-4">
                   {" "}
-                  <img src={d.image} className={d.image}></img>
+                  <img src={d.image} className={d.image} alt={d.title}></img>
                   <div className="service-desc">
                     <h3 key={`${d.title}-${i}`}>{d.title}</h3>
                     <p key={`${d.description}-${i}`}>{d.description}</p>

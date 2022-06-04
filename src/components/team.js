@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -30,7 +30,7 @@ export const Team = () => {
                 <div key={`${d.name}-${i}`} className="col-md-3 team">
                   <div className="thumbnail">
                     {" "}
-                    <img src={d.image} alt="..." className="team-img" />
+                    <img src={d.image} alt={d.name} className="team-img" />
                     <div className="caption">
                       <h4>{d.name}</h4>
                       <p>{d.position}</p>

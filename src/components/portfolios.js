@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -43,7 +43,11 @@ export const Portfolios = () => {
                       <div className="hover-text">
                         <h4>{d.title}</h4>
                       </div>
-                      <img src={d.image} className="img-responsive" />{" "}
+                      <img
+                        src={d.image}
+                        className="img-responsive"
+                        alt={d.title}
+                      />{" "}
                     </div>
                   </div>
                 </div>

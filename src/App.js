@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { Clients } from "./components/clients";
